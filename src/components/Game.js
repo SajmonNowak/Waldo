@@ -11,6 +11,11 @@ const Game = ({ levelData }) => {
     x: null,
     y: null,
   });
+  const [wantedCharacters, setWantedCharacters] = useState(
+    levelData.characters.map((character) => character.name.toLowerCase())
+  );
+
+  console.log(wantedCharacters);
 
   const openCharSelection = () => {
     setModal(true);
@@ -41,16 +46,21 @@ const Game = ({ levelData }) => {
 
   const evaluatePosition = async (character) => {
     const charCoordinates = await getDBCoordinates(character);
-    //  if(checkIfClickOnChar(charCoordinates)){
-    //    handleHit();
-    //  } else {
-    //    displayFail();
-    //  };
+     if(checkIfClickOnChar(charCoordinates)){
+       handleHit(character);
+     } else {
+       //displayFail();
+     };
   };
-  
+
+  const handleHit = (character) => {
+    const newWanted = wantedCharacters.filter((char) => char !== character);
+    setWantedCharacters(newWanted);
+  };
+
   return (
     <div style={{ position: "relative" }}>
-      <InGameNav />
+      <InGameNav levelData={levelData} wantedCharacters= {wantedCharacters} />
       <GameImageContainer
         openCharSelection={openCharSelection}
         setClickedPosition={setClickedPosition}

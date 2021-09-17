@@ -1,9 +1,8 @@
 import React from "react";
 import { SelectionModal } from "../styles/SelectionModal";
-import characters from "../data/characters";
 import { Selectable } from "../styles/Selectable";
 
-const CharSelection = ({ clickedPosition, handleSelection }) => {
+const CharSelection = ({ clickedPosition, handleSelection, characters}) => {
   const createSelectables = () => {
     return characters.map((character) => {
       return (
