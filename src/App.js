@@ -1,35 +1,18 @@
 import React, { useState } from "react";
-import CharSelection from "./components/CharSelection";
-import GameImageContainer from "./components/GameImageContainer";
-import db from "./firebase/firebase";
+import Game from "./components/Game";
+import LevelSelection from "./components/LevelSelection";
 
 function App() {
-  const [openModal, setModal] = useState(false);
-  const [clickedPosition, setClickedPosition] = useState({
-    xPos: null,
-    yPos: null,
-  });
+  const [levelData, setLevelData] = useState(null)
 
-  const openCharSelection = () => {
-    setModal(true);
-  };
-
-  const handleSelection = () => {
-    setModal(false);
-  };
+  const startLevel = (levelData) => {
+    setLevelData(levelData)
+  }
 
   return (
     <div style={{ position: "relative" }}>
-      <GameImageContainer
-        openCharSelection={openCharSelection}
-        setClickedPosition={setClickedPosition}
-      />
-      {openModal && (
-        <CharSelection
-          clickedPosition={clickedPosition}
-          handleSelection={handleSelection}
-        />
-      )}
+      {!levelData && <LevelSelection startLevel={startLevel} />}
+      {levelData && <Game levelData={levelData}/>}
     </div>
   );
 }

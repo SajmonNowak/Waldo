@@ -2,8 +2,7 @@ import React, { useState } from "react";
 import locnar from "../assets/locnar.jpg";
 import GameImage from "../styles/GameImageCointainer";
 
-const GameImageContainer = ({openCharSelection, setClickedPosition}) => {
-
+const GameImageContainer = ({ openCharSelection, setClickedPosition, levelImg }) => {
   const getClickPosition = (event) => {
     const x = event.nativeEvent.offsetX;
     const y = event.nativeEvent.offsetY;
@@ -11,17 +10,17 @@ const GameImageContainer = ({openCharSelection, setClickedPosition}) => {
     return { x, y };
   };
 
-  const updateClickedPosition = ({ x, y }) => {
-    setClickedPosition({xPos: x, yPos: y });
+  const updateClickedPosition = (clickCoordinate) => {
+    setClickedPosition({ x: clickCoordinate.x, y:clickCoordinate.y });
   };
 
   const handleClick = (e) => {
-    const { x, y } = getClickPosition(e);
-    updateClickedPosition({x, y});
+    const clickCoordinate = getClickPosition(e);
+    updateClickedPosition(clickCoordinate);
     openCharSelection();
   };
 
-  return <GameImage src={locnar} onClick={handleClick} />;
+  return <GameImage src={levelImg} onClick={handleClick} />;
 };
 
 export default GameImageContainer;
