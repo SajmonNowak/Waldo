@@ -18,7 +18,7 @@ const Game = ({ levelData }) => {
   console.log(wantedCharacters);
 
   const openCharSelection = () => {
-    setModal(true);
+    openModal ? setModal(false) : setModal(true)
   };
 
   const handleSelection = (character) => {
