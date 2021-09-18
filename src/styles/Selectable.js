@@ -6,6 +6,7 @@ background-color: white;
   height: 80px;
   width: 100%;
   font-size: 24px;
+  color: #011627;
 
   img{
       width: 80px;
@@ -17,7 +18,7 @@ background-color: white;
   }
 
   &:hover {
-      background-color: lightcoral;
+      background-color: #FF9F1C;
   }
 
 `;

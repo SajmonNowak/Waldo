@@ -1,11 +1,11 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import CharSelection from "./CharSelection";
 import GameImageContainer from "./GameImageContainer";
 import InGameNav from "./InGameNav";
 import getDBCoordinates from "../utitlis/getDBCoordinates";
 import standardizePos from "../utitlis/standardizePos";
 
-const Game = ({ levelData }) => {
+const Game = ({ levelData, endGame }) => {
   const [openModal, setModal] = useState(false);
   const [clickedPosition, setClickedPosition] = useState({
     x: null,
@@ -57,6 +57,13 @@ const Game = ({ levelData }) => {
     const newWanted = wantedCharacters.filter((char) => char !== character);
     setWantedCharacters(newWanted);
   };
+
+
+  useEffect(() => {
+    if(wantedCharacters.length === 0){
+      endGame()
+    }
+  }, [wantedCharacters])
 
   return (
     <div style={{ position: "relative" }}>

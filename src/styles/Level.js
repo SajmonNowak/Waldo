@@ -1,13 +1,14 @@
 import styled from 'styled-components';
 
 export const Level = styled.div`
-
+color: #011627;
 display: flex;
 align-items: center;
 width: 750px;
 margin: 20px;
-border: 2px solid black;
+border: 2px solid #011627;
 border-radius: 20px;
+background-color: #FDFFFC;
 
 .levelImgDiv{
     width: 300px;
@@ -23,7 +24,7 @@ border-radius: 20px;
 }
 
 &:hover {
-    border: 5px solid gold;
+    background-color: #FF9F1C;
     border-radius: 20px;
 }
   
