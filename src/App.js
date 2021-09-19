@@ -13,8 +13,9 @@ const PHASES = {
 };
 
 function App() {
-  const [phase, setPhase] = useState("PHASES.NAME");
+  const [phase, setPhase] = useState(PHASES.NAME);
   const [levelData, setLevelData] = useState(null);
+  const [playerName, setPlayerName] = useState();
   const [time, setTime] = useState({start:null, end:null})
 
   const startLevel = (levelData) => {
@@ -35,7 +36,7 @@ function App() {
   return (
     <div style={{ position: "relative" }}>
       <GlobalStyle />
-      {phase === PHASES.NAME && <StartScreen></StartScreen>}
+      {phase === PHASES.NAME && <StartScreen setPlayerName = {setPlayerName}></StartScreen>}
       {phase === PHASES.SELECTION && <LevelSelection startLevel={startLevel} />}
       {phase === PHASES.PLAY && (
         <Game levelData={levelData} endGame={endGame} />

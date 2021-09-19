@@ -5,7 +5,6 @@ import { Button } from "../styles/Button";
 const format = require('format-duration')
 
 const EndScreen = ({ restart, levelData, time }) => {
-  console.log(time.start, time.end);
   const getPlayerTime = () => {
     return format(time.end - time.start);
   };
