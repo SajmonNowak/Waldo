@@ -26,7 +26,6 @@ const Game = ({ levelData, endGame }) => {
 
   const checkIfClickOnChar = (charCoordinates) => {
     const relClickPos = standardizePos(clickedPosition);
-    console.log(charCoordinates, relClickPos);
     if (
       relClickPos.x > charCoordinates.x1 &&
       relClickPos.x < charCoordinates.x2

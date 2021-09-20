@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import background from "../assets/background.jpg"
 
 export const StartScreenContainer= styled.div`
 font-size: 32px;
@@ -7,6 +8,9 @@ font-size: 32px;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
+  background: url(${background}) blue;
+  color: #011627;
+  font-weight: bold;
 `;
 
 export const NameInput = styled.input`

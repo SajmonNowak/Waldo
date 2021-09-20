@@ -7,7 +7,6 @@ import Timer from "./Timer";
 const InGameNav = ({ levelData, wantedCharacters }) => {
 
   const checkIfFound = (character) => {
-    console.log(character);
     if (wantedCharacters.some((char) => char === character)) {
       return false;
     } else {

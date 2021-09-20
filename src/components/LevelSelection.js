@@ -3,7 +3,7 @@ import levels from "../data/levels";
 import { LevelSelectionMenu } from '../styles/LevelSelectionMenu';
 import LevelCard from './LevelCard'
 
-const LevelSelection = ({startLevel}) => {
+const LevelSelection = ({startLevel, playerName}) => {
 
     const displayLevels = () => {
         return levels.map((level) => {
@@ -13,7 +13,8 @@ const LevelSelection = ({startLevel}) => {
 
     return (
         <LevelSelectionMenu>
-            <div>Choose your Level</div>
+            <h2>Welcome {playerName}</h2>
+            <div className="marginBot">Choose your Level</div>
             {displayLevels()}
         </LevelSelectionMenu>
     )

@@ -6,9 +6,10 @@ display: flex;
 align-items: center;
 width: 750px;
 margin: 20px;
-border: 2px solid #011627;
+border: 4px solid #011627;
 border-radius: 20px;
 background-color: #FDFFFC;
+transition: all .2s ease-in-out;
 
 .levelImgDiv{
     width: 300px;
@@ -24,8 +25,8 @@ background-color: #FDFFFC;
 }
 
 &:hover {
-    background-color: #FF9F1C;
-    border-radius: 20px;
+    transform: scale(1.05);
+    border-color: #ff9f1c;
 }
   
 `;

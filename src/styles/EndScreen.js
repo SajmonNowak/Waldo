@@ -5,6 +5,7 @@ export const EndScreenStyle = styled.div`
   color: #011627;
   background-color:  #FF9F1C;
   height: 100vh;
+  padding: 50px;
 
   h2 {
       font-size: 42px;
@@ -29,8 +30,29 @@ export const EndScreenStyle = styled.div`
   }
 
   .personalTime{
+    display: flex;
     font-size: 32px;
     margin-top: 50px;
-    background-color: white ;
+    
+     p{
+       margin-left: 5px;
+       color: red;
+     }
+  }
+
+  .highScoreTable {
+    justify-self: center;
+    height: 500px;
+    margin-top: 50px;
+
+    h4{
+      text-align: center;
+      font-size: 24px;
+    }
+
+    .highscores {
+      border-top: 2px solid red;
+      padding-top: 10px;
+    }
   }
 `;
