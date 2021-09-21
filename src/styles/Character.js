@@ -15,5 +15,9 @@ export const Character = styled.div`
         height: 100px;
     }
 
+    div{
+        margin-left: 40px;
+    }
+
   
 `;

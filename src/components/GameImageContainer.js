@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import locnar from "../assets/locnar.jpg";
 import GameImage from "../styles/GameImageCointainer";
+import standardizePos from "../utitlis/standardizePos";
 
 const GameImageContainer = ({ openCharSelection, setClickedPosition, levelImg }) => {
   const getClickPosition = (event) => {
@@ -16,6 +17,8 @@ const GameImageContainer = ({ openCharSelection, setClickedPosition, levelImg })
 
   const handleClick = (e) => {
     const clickCoordinate = getClickPosition(e);
+    console.log(e);
+    console.log(standardizePos(clickCoordinate), clickCoordinate);
     updateClickedPosition(clickCoordinate);
     openCharSelection();
   };

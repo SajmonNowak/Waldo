@@ -7,7 +7,7 @@ const standardizePos = ({x, y}) => {
 }
 
 const standardize = (coord) => {
-    const imageWidth = window.innerWidth;
+    const imageWidth = document.body.clientWidth;
     const standardizedCoord = Math.ceil((coord * 1000) / imageWidth);
 
     return standardizedCoord;

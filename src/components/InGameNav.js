@@ -18,10 +18,13 @@ const InGameNav = ({ levelData, wantedCharacters }) => {
     return levelData.characters.map((character) => {
       return (
         <CharacterSymbol>
+          <div className = "imgDiv">
           <img src={character.img} />
           {checkIfFound(character.name.toLowerCase()) && (
             <img src={cross} alt="found" />
           )}
+          </div>
+          <div className="name">{character.name}</div>
         </CharacterSymbol>
       );
     });

@@ -7,7 +7,7 @@ import { HighScore } from "../styles/HighScore";
 const format = require("format-duration");
 
 const EndScreen = ({ restart, levelData, time }) => {
-  const [highScoreData, setHighScoreData] = useFirestore("highscores");
+  const [highScoreData, setHighScoreData] = useFirestore(levelData.name);
 
   const getPlayerTime = () => {
     return format(time.end - time.start);
@@ -42,7 +42,7 @@ const EndScreen = ({ restart, levelData, time }) => {
         <Button onClick={restart}>Restart</Button>
       </div>
       <div className="imgDiv">
-        <img src={locnar} />
+        <img src={levelData.img} />
       </div>
     </EndScreenStyle>
   );

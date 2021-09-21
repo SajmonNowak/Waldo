@@ -15,7 +15,7 @@ export const PHASES = {
 };
 
 function App() {
-  const [phase, setPhase] = useState(PHASES.END);
+  const [phase, setPhase] = useState(PHASES.NAME);
   const [levelData, setLevelData] = useState(null);
   const [playerName, setPlayerName] = useState();
   const [time, setTime] = useState({ start: null, end: null });
@@ -28,7 +28,7 @@ function App() {
 
   const saveHighScore = (endTime) => {
     const formatTime = format(endTime - time.start);
-    addScoreToDB(playerName, formatTime);
+    addScoreToDB(playerName, formatTime, levelData);
   };
 
   const endGame = () => {

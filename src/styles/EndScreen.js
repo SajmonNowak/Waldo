@@ -37,6 +37,7 @@ export const EndScreenStyle = styled.div`
      p{
        margin-left: 5px;
        color: red;
+       font-weight: bold;
      }
   }
 

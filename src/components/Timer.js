@@ -9,7 +9,7 @@ const Timer = () => {
     }, [])
 
     return (
-        <div>
+        <div className="time">
             {timer}
         </div>
     )

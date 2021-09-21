@@ -5,7 +5,7 @@ export const LevelSelectionMenu = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    background: url(${background}) blue;
+    background: url(${background});
     color: #011627;
     font-size: 24px;
     padding: 50px;

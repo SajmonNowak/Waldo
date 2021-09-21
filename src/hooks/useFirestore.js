@@ -16,7 +16,6 @@ const useFirestore = (col) => {
       });
 
       setDocs(data);
-      console.log(data);
     };
     setData();
   }, [col]);
