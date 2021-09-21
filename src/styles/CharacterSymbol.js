@@ -4,7 +4,6 @@ export const CharacterSymbol = styled.div`
   width: 100px;
   position: relative;
   font-size: 22px;
-  background-color: red;
 
   .imgDiv {
     width: 100px;

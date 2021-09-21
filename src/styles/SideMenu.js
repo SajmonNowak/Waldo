@@ -14,14 +14,16 @@ const SideMenu = styled.div`
   height: auto;
   background-color: #ff9f1c;
   border-radius: 20px;
+  padding: 5px;
 
   .imgDiv {
     display: flex;
-    margin-top: 20px;
+    margin-top: 10px;
   }
 
   .time {
       margin-top:20px;
+      color: #e71d36;
   }
 `;
 

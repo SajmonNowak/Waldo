@@ -2,7 +2,7 @@ import React from "react";
 import { CharacterSymbol } from "../styles/CharacterSymbol";
 import SideMenu from "../styles/SideMenu";
 import cross from "../assets/cross.png";
-import Timer from "./Timer";
+import TimerComponent from "./Timer";
 
 const InGameNav = ({ levelData, wantedCharacters }) => {
 
@@ -34,7 +34,9 @@ const InGameNav = ({ levelData, wantedCharacters }) => {
     <SideMenu>
       <div>Wanted</div>
       <div className="imgDiv">{createCharList()}</div>
-      <Timer />
+      <div className="time">
+      <TimerComponent />
+      </div>
          </SideMenu>
   );
 };

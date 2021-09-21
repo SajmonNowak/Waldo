@@ -1,19 +1,15 @@
 import React, {useEffect} from 'react'
-import useTimer from '../hooks/useTimer'
+import Timer from 'react-compound-timer/build'
 
-const Timer = () => {
-   const {timer, start} = useTimer()
-
-    useEffect(() => {
-        start()
-    }, [])
+const TimerComponent = () => {
 
     return (
-        <div className="time">
-            {timer}
-        </div>
+        <Timer formatValue={(value) => `${(value < 10 ? `0${value}` : value)}`} >
+            <Timer.Minutes/>: 
+            <Timer.Seconds/>
+        </Timer>
     )
 }
 
-export default Timer
+export default TimerComponent;
 
