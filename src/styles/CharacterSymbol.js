@@ -6,11 +6,13 @@ export const CharacterSymbol = styled.div`
   font-size: 22px;
 
   .imgDiv {
+    position: relative;
     width: 100px;
     height: 100px;
   }
 
   img {
+    position: absolute;
     width: 100%;
     height: 100%;
   }
@@ -19,6 +21,8 @@ export const CharacterSymbol = styled.div`
     width: 100%;
     height: 100%;
     position: absolute;
+    top:0px;
+    left: 0px;
   }
 
   .name {

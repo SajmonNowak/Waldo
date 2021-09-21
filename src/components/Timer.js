@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react'
+import React from 'react'
 import Timer from 'react-compound-timer/build'
 
 const TimerComponent = () => {
