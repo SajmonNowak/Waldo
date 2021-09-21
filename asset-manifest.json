@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.js": "/Waldo/static/js/main.1f2f19c3.chunk.js",
+    "main.js.map": "/Waldo/static/js/main.1f2f19c3.chunk.js.map",
+    "runtime-main.js": "/Waldo/static/js/runtime-main.28a1e5f5.js",
+    "runtime-main.js.map": "/Waldo/static/js/runtime-main.28a1e5f5.js.map",
+    "static/js/2.93a4d25f.chunk.js": "/Waldo/static/js/2.93a4d25f.chunk.js",
+    "static/js/2.93a4d25f.chunk.js.map": "/Waldo/static/js/2.93a4d25f.chunk.js.map",
+    "index.html": "/Waldo/index.html",
+    "static/js/2.93a4d25f.chunk.js.LICENSE.txt": "/Waldo/static/js/2.93a4d25f.chunk.js.LICENSE.txt",
+    "static/media/Ash.524b2eb0.png": "/Waldo/static/media/Ash.524b2eb0.png",
+    "static/media/Ryuk.df47d7f0.png": "/Waldo/static/media/Ryuk.df47d7f0.png",
+    "static/media/Stewie.df82f0fb.png": "/Waldo/static/media/Stewie.df82f0fb.png",
+    "static/media/background.c7c0e5b2.jpg": "/Waldo/static/media/background.c7c0e5b2.jpg",
+    "static/media/locnar.314cec99.jpg": "/Waldo/static/media/locnar.314cec99.jpg",
+    "static/media/r2d2.b028d780.png": "/Waldo/static/media/r2d2.b028d780.png",
+    "static/media/universe113.c4254385.jpg": "/Waldo/static/media/universe113.c4254385.jpg",
+    "static/media/waldo.5484b9e6.png": "/Waldo/static/media/waldo.5484b9e6.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.28a1e5f5.js",
+    "static/js/2.93a4d25f.chunk.js",
+    "static/js/main.1f2f19c3.chunk.js"
+  ]
+}
