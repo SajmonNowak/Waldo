@@ -3,8 +3,12 @@ import { CharacterSymbol } from "../styles/CharacterSymbol";
 import SideMenu from "../styles/SideMenu";
 import cross from "../assets/cross.png";
 import TimerComponent from "./Timer";
+import useToggle from "../hooks/useToggle";
+import {BsChevronDoubleDown as OpenIcon} from "react-icons/bs"
+import {BsChevronDoubleUp as CloseIcon} from "react-icons/bs"
 
 const InGameNav = ({ levelData, wantedCharacters }) => {
+  const [open, toggle] = useToggle()
 
   const checkIfFound = (character) => {
     if (wantedCharacters.some((char) => char === character)) {
@@ -31,12 +35,16 @@ const InGameNav = ({ levelData, wantedCharacters }) => {
   };
 
   return (
-    <SideMenu>
-      <div>Wanted</div>
-      <div className="imgDiv">{createCharList()}</div>
-      <div className="time">
+    <SideMenu open={open}> 
+      <div className="closedMenu" onClick = {toggle}>
+      {!open ? <OpenIcon className="icon"/> : <CloseIcon className="icon"/>}
+      <div>Wanted</div><div className="time">
       <TimerComponent />
       </div>
+      </div>
+      { open && <div onClick = {toggle} className="imgDiv">{createCharList()}</div>
+       
+      }
          </SideMenu>
   );
 };
