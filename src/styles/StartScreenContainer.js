@@ -22,6 +22,8 @@ margin-bottom: 20px;
 `;
 
 export const Error = styled.div`
+padding: 2px;
+background-color: white;
 font-size: 24px;
 margin-top: 10px;
 color: #e71d36

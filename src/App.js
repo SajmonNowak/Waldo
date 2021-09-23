@@ -2,7 +2,9 @@ import React, { useState } from "react";
 import EndScreen from "./components/EndScreen";
 import Game from "./components/Game";
 import LevelSelection from "./components/LevelSelection";
+import ProjectInfo from "./components/ProjectInfo";
 import StartScreen from "./components/StartScreen";
+import useToggle from "./hooks/useToggle";
 import GlobalStyle from "./styles/GlobalStyle";
 import addScoreToDB from "./utitlis/addScoreToDB";
 const format = require("format-duration");
@@ -15,6 +17,7 @@ export const PHASES = {
 };
 
 function App() {
+  const [open, toggle] = useToggle()
   const [phase, setPhase] = useState(PHASES.NAME);
   const [levelData, setLevelData] = useState(null);
   const [playerName, setPlayerName] = useState();
@@ -41,14 +44,18 @@ function App() {
     setPhase(PHASES.SELECTION);
   };
 
+
   return (
     <div style={{ position: "relative" }}>
       <GlobalStyle />
       {phase === PHASES.NAME && (
+        <React.Fragment>
+          {!open && <ProjectInfo toggle={toggle}/>}
         <StartScreen
           setPlayerName={setPlayerName}
           setPhase={setPhase}
-        ></StartScreen>
+        />
+        </React.Fragment>
       )}
       {phase === PHASES.SELECTION && (
         <LevelSelection startLevel={startLevel} playerName={playerName} />

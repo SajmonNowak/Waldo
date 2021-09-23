@@ -9,4 +9,8 @@ font-weight: bold;
 font-size: 20px;
 margin: 10px;
 border:none;
+
+&:hover {
+    background-color: #ff0522;
+}
 `;
