@@ -36,6 +36,19 @@ const SideMenu = styled.div`
     font-size: 28px;
     margin-right: 10px;
   }
+
+  .togglePart {
+    background-color: "red";
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .infoText {
+    padding-top: 20px;
+    padding-bottom: 10px;
+    font-size: 18px;
+  }
 `;
 
 export default SideMenu;

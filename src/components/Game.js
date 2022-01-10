@@ -78,6 +78,7 @@ const Game = ({ levelData, endGame }) => {
           clickedPosition={clickedPosition}
           handleSelection={handleSelection}
           characters={levelData.characters}
+          wantedCharacters={wantedCharacters}
         />
       )}
     </div>

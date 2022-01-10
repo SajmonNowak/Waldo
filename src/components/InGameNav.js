@@ -4,11 +4,11 @@ import SideMenu from "../styles/SideMenu";
 import cross from "../assets/cross.png";
 import TimerComponent from "./Timer";
 import useToggle from "../hooks/useToggle";
-import {BsChevronDoubleDown as OpenIcon} from "react-icons/bs"
-import {BsChevronDoubleUp as CloseIcon} from "react-icons/bs"
+import { BsChevronDoubleDown as OpenIcon } from "react-icons/bs";
+import { BsChevronDoubleUp as CloseIcon } from "react-icons/bs";
 
 const InGameNav = ({ levelData, wantedCharacters }) => {
-  const [open, toggle] = useToggle()
+  const [open, toggle] = useToggle(true);
 
   const checkIfFound = (character) => {
     if (wantedCharacters.some((char) => char === character)) {
@@ -22,11 +22,11 @@ const InGameNav = ({ levelData, wantedCharacters }) => {
     return levelData.characters.map((character) => {
       return (
         <CharacterSymbol>
-          <div className = "imgDiv">
-          <img src={character.img} />
-          {checkIfFound(character.name.toLowerCase()) && (
-            <img src={cross} alt="found" />
-          )}
+          <div className="imgDiv">
+            <img src={character.img} />
+            {checkIfFound(character.name.toLowerCase()) && (
+              <img src={cross} alt="found" />
+            )}
           </div>
           <div className="name">{character.name}</div>
         </CharacterSymbol>
@@ -35,17 +35,23 @@ const InGameNav = ({ levelData, wantedCharacters }) => {
   };
 
   return (
-    <SideMenu open={open}> 
-      <div className="closedMenu" onClick = {toggle}>
-      {!open ? <OpenIcon className="icon"/> : <CloseIcon className="icon"/>}
-      <div>Wanted</div><div className="time">
-      <TimerComponent />
+    <SideMenu open={open}>
+      <div className="closedMenu" onClick={toggle}>
+        {!open ? <OpenIcon className="icon" /> : <CloseIcon className="icon" />}
+        <div>Wanted</div>
+        <div className="time">
+          <TimerComponent />
+        </div>
       </div>
-      </div>
-      { open && <div onClick = {toggle} className="imgDiv">{createCharList()}</div>
-       
-      }
-         </SideMenu>
+      {open && (
+        <div className="togglePart">
+          <div onClick={toggle} className="imgDiv">
+            {createCharList()}
+          </div>
+          <p className="infoText">Click to close</p>
+        </div>
+      )}
+    </SideMenu>
   );
 };
 

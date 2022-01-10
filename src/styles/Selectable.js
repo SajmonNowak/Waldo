@@ -1,24 +1,30 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const Selectable = styled.div`
-background-color: white;
+  background-color: ${({found}) => (found ? "grey" : "white")};
   display: flex;
   height: 80px;
   width: 100%;
   font-size: 24px;
   color: #011627;
+  position: relative;
 
-  img{
-      width: 80px;
+  img {
+    width: 80px;
+  }
+
+  .cross {
+    position: absolute;
+    left: 0;
+    top: 0;
   }
 
   div {
-      align-self: center;
-      margin: auto;
+    align-self: center;
+    margin: auto;
   }
 
   &:hover {
-      background-color: #FF9F1C;
+    background-color: #ff9f1c;
   }
-
 `;
