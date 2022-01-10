@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Selectable = styled.div`
-  background-color: ${({found}) => (found ? "grey" : "white")};
+  background-color: ${({ found }) => (found ? "grey" : "white")};
   display: flex;
   height: 80px;
   width: 100%;
@@ -25,6 +25,6 @@ export const Selectable = styled.div`
   }
 
   &:hover {
-    background-color: #ff9f1c;
+    background-color: ${({ found }) => (found ? "undefined" : "#ff9f1c")};
   }
 `;

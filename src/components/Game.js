@@ -63,11 +63,8 @@ const Game = ({ levelData, endGame }) => {
 
   return (
     <div style={{ position: "relative" }}>
-          <InGameNav
-            levelData={levelData}
-            wantedCharacters={wantedCharacters}
-          />
-          
+      <InGameNav levelData={levelData} wantedCharacters={wantedCharacters} />
+
       <GameImageContainer
         openCharSelection={openCharSelection}
         setClickedPosition={setClickedPosition}

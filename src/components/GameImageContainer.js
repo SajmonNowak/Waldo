@@ -3,7 +3,11 @@ import locnar from "../assets/locnar.jpg";
 import GameImage from "../styles/GameImageCointainer";
 import standardizePos from "../utitlis/standardizePos";
 
-const GameImageContainer = ({ openCharSelection, setClickedPosition, levelImg }) => {
+const GameImageContainer = ({
+  openCharSelection,
+  setClickedPosition,
+  levelImg,
+}) => {
   const getClickPosition = (event) => {
     const x = event.nativeEvent.offsetX;
     const y = event.nativeEvent.offsetY;
@@ -12,13 +16,11 @@ const GameImageContainer = ({ openCharSelection, setClickedPosition, levelImg })
   };
 
   const updateClickedPosition = (clickCoordinate) => {
-    setClickedPosition({ x: clickCoordinate.x, y:clickCoordinate.y });
+    setClickedPosition({ x: clickCoordinate.x, y: clickCoordinate.y });
   };
 
   const handleClick = (e) => {
     const clickCoordinate = getClickPosition(e);
-    console.log(e);
-    console.log(standardizePos(clickCoordinate), clickCoordinate);
     updateClickedPosition(clickCoordinate);
     openCharSelection();
   };
