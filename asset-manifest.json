@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.js": "/Waldo/static/js/main.a8d1019c.chunk.js",
-    "main.js.map": "/Waldo/static/js/main.a8d1019c.chunk.js.map",
+    "main.js": "/Waldo/static/js/main.91023a9d.chunk.js",
+    "main.js.map": "/Waldo/static/js/main.91023a9d.chunk.js.map",
     "runtime-main.js": "/Waldo/static/js/runtime-main.28a1e5f5.js",
     "runtime-main.js.map": "/Waldo/static/js/runtime-main.28a1e5f5.js.map",
     "static/js/2.b105dd20.chunk.js": "/Waldo/static/js/2.b105dd20.chunk.js",
@@ -20,6 +20,6 @@
   "entrypoints": [
     "static/js/runtime-main.28a1e5f5.js",
     "static/js/2.b105dd20.chunk.js",
-    "static/js/main.a8d1019c.chunk.js"
+    "static/js/main.91023a9d.chunk.js"
   ]
 }
